@@ -57,6 +57,7 @@ def get_all_api(*args, **kwargs):
     :param kwargs:str
     :return: 所有接口信息
     """
+    # 从method_map获取所有接口方法，重组数格式
     api_dict = api.dispatcher.method_map
     api_name_list = api_dict.keys()
     result = {}
@@ -68,7 +69,7 @@ def get_all_api(*args, **kwargs):
     return result
 
 
-
+# get_all_api返回的数据格式
 def get_all_api_temp(*args, **kwargs):
     result = {'login': {'name': 'login', 'description': '登录接口', 'return': '返回信息', 'params': {'login_name': 'str', "password": "str"}},
               'logout': {'name': 'logout', 'description': '退出', 'return': '返回信息',  'params': {"name": "str", "pwd": "str"}}}

@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+
+# 把function的__doc__字符串转换为字典
 def trans_str_to_dict(do_str):
     result = {}
     if not do_str:
@@ -19,6 +21,7 @@ def trans_str_to_dict(do_str):
     return result
 
 
+# 字典b是字典a中的一个value，把字典b中的一个键值对移动到字典a
 def dict_move_key(dict_a, dict_b, key):
     if key in dict_b:
         dict_a[key] = dict_b[key]
@@ -26,6 +29,7 @@ def dict_move_key(dict_a, dict_b, key):
     return dict_a
 
 
+# 重组接口信息为get_all_api_tem中的数据格式
 def compose_api_info(key, api_dict):
     tem_res = {}
     tem_res["name"] = key
