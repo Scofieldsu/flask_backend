@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22c64927-3624-41ec-9025-0f2494914e2d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/common.py" afterPath="$PROJECT_DIR$/controller/common.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/api_tools.py" afterPath="$PROJECT_DIR$/utils/api_tools.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="flask_backend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -167,8 +166,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="512" />
-    <option name="y" value="80" />
+    <option name="x" value="270" />
+    <option name="y" value="89" />
     <option name="width" value="1357" />
     <option name="height" value="901" />
   </component>
@@ -438,7 +437,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="512" y="80" width="1357" height="901" extended-state="0" />
+    <frame x="270" y="89" width="1357" height="901" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1715138" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
