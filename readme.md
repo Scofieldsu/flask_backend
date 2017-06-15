@@ -9,7 +9,7 @@
 
  - 接口模型：
 
- ```
+ ```python
 @api.dispatcher.add_method
 def my_method(param_dict, param_int, param_str, param_list):
     """
