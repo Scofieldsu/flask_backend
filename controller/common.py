@@ -1,52 +1,8 @@
 # encoding: utf-8
 
 from utils.api_tools import compose_api_info
-from apis import *
-
-
-@api.dispatcher.add_method
-def my_method(param_dict, param_int, param_str, param_list):
-    """
-    :description  测试接口
-    :param param_dict: dict
-    :param param_int: int
-    :param param_str: str
-    :param param_list: list
-    :return: code or message
-    """
-
-    data1 = json.loads(param_dict)
-    data2 = param_int
-    data3 = param_str
-    data4 = param_list
-    result = {
-        "param_dict": data1,
-        "param_int": data2,
-        "param_str": data3,
-        "param_list": data4
-    }
-    return result
-
-@api.dispatcher.add_method
-def login(name, pwd):
-    """
-    :description 登录接口
-    :param name: str
-    :param pwd: str
-    :return: 登录信息
-    """
-    result = {"msg": "login success", "code": 200}
-    return result
-
-
-@api.dispatcher.add_method
-def logout(name):
-    """
-    :description 退出接口
-    :param name: str
-    :return: 退出信息success or error
-    """
-    return "logout success"
+from controller.api.base_api import *
+from controller.api.loginout import *
 
 
 @api.dispatcher.add_method

@@ -4,9 +4,9 @@ from jsonrpc.backend.flask import api
 
 
 @api.dispatcher.add_method
-def my_method2(param_dict, param_int, param_str, param_list):
+def test_api(param_dict, param_int, param_str, param_list):
     """
-    :description  测试接口2
+    :description  测试接口
     :param param_dict: dict
     :param param_int: int
     :param param_str: str

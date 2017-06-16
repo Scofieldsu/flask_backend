@@ -3,7 +3,7 @@
  - - -
  - 运行后，localhost:5000/api_test/ 为api测试页面
 
- - 新增api在controller/apis.py 中添加，在其他文件中的api需要导入到controller/common中
+ - 新增api在controller/api/中添加，并导入到controller/common.py中
 
  - 接口注释根据pycharm的自动补全，在参数后面填写数据类型即可；其中:description为接口描述（可选项）
 
