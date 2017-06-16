@@ -176,8 +176,10 @@
 <ul class="simple">
 <li>安装依赖 ：pip install -r requirements.txt</li>
 <li>运行： python run.py</li>
+<li>gunicorn启动：gunicorn - c gun.conf run:app</li>
 <li>默认api测试页面： <a class="reference external" href="http://localhost:5000/api_test/">http://localhost:5000/api_test/</a></li>
 <li>config.py用于常量配置</li>
+<li>gun.conf 用于gunicorn配置</li>
 <li>appmanage.py用于flask.app的运行设置</li>
 <li>controller/api 用于存放接口文件</li>
 <li>docs用于文档维护</li>
