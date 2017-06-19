@@ -1,9 +1,9 @@
 # encoding: utf-8
-
+from config import PARAMS_TYPE
 
 # 把function的__doc__字符串转换为字典
 def trans_str_to_dict(do_str):
-    result = {}
+    result = {"param_explain":{}}
     if not do_str:
         return result
     tem_list = do_str.split('\n')
@@ -14,8 +14,10 @@ def trans_str_to_dict(do_str):
             params = x.split(":param")[1]
             if params.strip():
                 tem = params.split(':')
-                if len(tem) >= 2:
+                if len(tem) >= 2 and tem[1].strip().lower() in PARAMS_TYPE:
                     result[tem[0].strip()] = tem[1].strip()
+                if len(tem) >= 3 :
+                    result["param_explain"][tem[0].strip()] = tem[2].strip()
         elif ":return:" in x:
             result["return"] = x.split(":return:")[1]
     return result
@@ -36,5 +38,6 @@ def compose_api_info(key, api_dict):
     doc_dict = trans_str_to_dict(api_dict[key].__doc__)
     tem_res = dict_move_key(tem_res, doc_dict, "description")
     tem_res = dict_move_key(tem_res, doc_dict, "return")
+    tem_res = dict_move_key(tem_res,doc_dict,"param_explain")
     tem_res["params"] = doc_dict
     return tem_res
