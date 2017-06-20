@@ -7,10 +7,10 @@ from jsonrpc.backend.flask import api
 def test_api(param_dict, param_int, param_str, param_list):
     """
     :description  测试接口
-    :param param_dict: dict
-    :param param_int: int
-    :param param_str: str
-    :param param_list: list
+    :param param_dict: dict:字典参数
+    :param param_int: int:整型
+    :param param_str: str:无默认值
+    :param param_list: list:可以省略[]
     :return: code or message
     """
 
