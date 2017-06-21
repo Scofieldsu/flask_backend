@@ -9,7 +9,7 @@ def trans_str_to_dict(do_str):
     tem_list = do_str.split('\n')
     for x in tem_list:
         if ":description" in x:
-            result["description"] = x.split(":description")[1]
+            result["description"] = x.split(":description")[1].strip()
         elif ":param" in x:
             params = x.split(":param")[1]
             if params.strip():
@@ -19,7 +19,7 @@ def trans_str_to_dict(do_str):
                 if len(tem) >= 3 :
                     result["param_explain"][tem[0].strip()] = tem[2].strip()
         elif ":return:" in x:
-            result["return"] = x.split(":return:")[1]
+            result["return"] = x.split(":return:")[1].strip()
     return result
 
 

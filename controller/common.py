@@ -27,6 +27,6 @@ def get_all_api(*args, **kwargs):
 
 # get_all_api返回的数据格式
 def get_all_api_temp(*args, **kwargs):
-    result = {'login': {'name': 'login', 'description': '登录接口', 'return': '返回信息', 'params': {'login_name': 'str', "password": "str"}},
-              'logout': {'name': 'logout', 'description': '退出', 'return': '返回信息',  'params': {"name": "str", "pwd": "str"}}}
+    result = {'login': {'name': 'login', 'description': '登录接口', 'return': '返回信息', 'param_explain': {},  'params': {'login_name': 'str', "password": "str"}},
+              'logout': {'name': 'logout', 'description': '退出', 'return': '返回信息',  'param_explain': {}, 'params': {"name": "str", "pwd": "str"}}}
     return result
