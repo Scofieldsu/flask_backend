@@ -1,7 +1,7 @@
 # encoding: utf-8
 from flask import json
 from jsonrpc.backend.flask import api
-
+import datetime
 
 api_add = api.dispatcher.add_method
 
@@ -23,12 +23,14 @@ def test_api(my_dict, my_int, my_str, my_list, my_datetime):
     data3 = my_str
     data4 = my_list
     data5 = my_datetime
+    data6 = datetime.datetime.strptime(my_datetime,'%Y-%m-%d %H:%M:%S')
     result = {
-        "loads之前的my_dict": my_dict,
-        "my_dict": data1,
+        "raw__my_dict": my_dict,
+        "loads__my_dict": data1,
         "my_int": data2,
         "my_str": data3,
         "my_list": data4,
-        "my_datetime": data5
+        "raw__my_datetime": data5,
+        "StrPTime__my_datetime": data6
     }
     return result
