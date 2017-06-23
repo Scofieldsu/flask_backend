@@ -1,9 +1,10 @@
 # encoding: utf-8
-from flask import json
-from jsonrpc.backend.flask import api
+# from flask import json
+# from jsonrpc.backend.flask import api
+from controller.api.base_api import api_add
 
 
-@api.dispatcher.add_method
+@api_add
 def login(name, pwd):
     """
     :description 登录接口
@@ -15,7 +16,7 @@ def login(name, pwd):
     return result
 
 
-@api.dispatcher.add_method
+@api_add
 def logout(name):
     """
     :description 退出接口

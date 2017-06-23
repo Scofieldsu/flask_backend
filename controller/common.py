@@ -5,7 +5,7 @@ from controller.api.base_api import *
 from controller.api.loginout import *
 
 
-@api.dispatcher.add_method
+@api_add
 def get_all_api(*args, **kwargs):
     """
     :description 获取接口信息

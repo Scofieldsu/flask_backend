@@ -3,7 +3,10 @@ from flask import json
 from jsonrpc.backend.flask import api
 
 
-@api.dispatcher.add_method
+api_add = api.dispatcher.add_method
+
+
+@api_add
 def test_api(param_dict, param_int, param_str, param_list):
     """
     :description  测试接口
