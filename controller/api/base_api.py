@@ -1,9 +1,7 @@
 # encoding: utf-8
 from flask import json
-from jsonrpc.backend.flask import api
+from controller.api import api,api_add
 import datetime
-
-api_add = api.dispatcher.add_method
 
 
 @api_add

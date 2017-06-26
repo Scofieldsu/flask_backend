@@ -1,6 +1,4 @@
 # encoding: utf-8
-# from flask import json
-# from jsonrpc.backend.flask import api
 from controller.api.base_api import api_add
 
 
